@@ -1,0 +1,12 @@
+# Balatro mod ignores
+*.log
+debug.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
