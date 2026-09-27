@@ -2,8 +2,12 @@
     "id": "wayrons_ginga",
     "name": "Wayron's Ginga",
     "author": ["Wayron"],
-    "description": "A collection of Jokers and Decks i made that bend the rules of card interactions.",
+    "description": "A collection of Jokers and Decks that bend the rules of card interactions.",
     "prefix": "wg",
     "main_file": "main.lua",
-    "version": "0.2.0"
+    "version": "0.2.0",
+    "badge_colour": "0984E3",
+    "dependencies": [
+        "Steamodded (>=1.0.0)"
+    ]
 }

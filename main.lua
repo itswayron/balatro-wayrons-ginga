@@ -8,6 +8,10 @@ SMODS.current_mod.optional_features = {
     retrigger_joker = true
 }
 
+if HEX then
+    SMODS.current_mod.badge_colour = HEX("0984E3")
+end
+
 -- 1. Atlases
 assert(SMODS.load_file("src/atlases.lua"))()
 
