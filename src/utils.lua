@@ -164,3 +164,33 @@ function WG.get_stack_overflow_triggers()
     end
     return triggers
 end
+
+--- Helper: Get total sell cost bonus from active WG vouchers (Scalper / Dollar Dealer)
+function WG.get_voucher_consumable_bonus()
+    if not G.GAME or not G.GAME.used_vouchers then return 0 end
+    if G.GAME.used_vouchers['v_wg_dollar_dealer'] then
+        return 3
+    elseif G.GAME.used_vouchers['v_wg_scalper'] then
+        return 1
+    end
+    return 0
+end
+
+--- Helper: Check if a card is a consumable (vanilla or modded)
+function WG.is_consumable(card)
+    if not card or not card.ability then return false end
+    -- Exclude non-consumable card sets explicitly
+    local set = card.ability.set
+    if set == 'Joker' or set == 'Voucher' or set == 'Booster' or set == 'Default' or set == 'Enhanced' then
+        return false
+    end
+    -- Standard Balatro consumable table (vanilla & most mods)
+    if card.ability.consumeable or card.ability.consumable then return true end
+    -- Vanilla consumable sets
+    if set == 'Tarot' or set == 'Planet' or set == 'Spectral' then return true end
+    -- Steamodded custom consumable types registered by other mods (e.g. Cryptid, Bunco)
+    if SMODS and SMODS.ConsumableTypes and set and SMODS.ConsumableTypes[set] then return true end
+    -- Stored in the player's consumable area
+    if card.area and G.consumeables and card.area == G.consumeables then return true end
+    return false
+end

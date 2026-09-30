@@ -17,6 +17,15 @@ A Balatro mod that introduces innovative Jokers, a custom Deck with an energy re
 
 ---
 
+## 🎟️ Vouchers
+
+| Voucher | Tier | Cost | Requires | Effect |
+| :--- | :---: | :---: | :--- | :--- |
+| **Scalper**<br>*(Cambista)* | 1 | $10 | None | All **Consumables** sell for **+$1** above their purchase cost. |
+| **Dollar Dealer**<br>*(Doleiro)* | 2 | $10 | Scalper | All **Consumables** sell for an additional **+$2** *(**+$3 total** above purchase cost)*. |
+
+---
+
 ## 🔋 Decks
 
 ### **Battery Deck** *(Deck Bateria)*

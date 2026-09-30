@@ -53,6 +53,22 @@ return {
                 }
             }
         },
+        Voucher = {
+            v_wg_scalper = {
+                name = "Scalper",
+                text = {
+                    "All {C:attention}Consumables{} sell for",
+                    "{C:money}+#1#{} above purchase cost"
+                }
+            },
+            v_wg_dollar_dealer = {
+                name = "Dollar Dealer",
+                text = {
+                    "All {C:attention}Consumables{} sell for an",
+                    "additional {C:money}+#1#{} {C:inactive}(+#2# total){}"
+                }
+            }
+        },
         Back = {
             b_wg_battery = {
                 name = "Battery Deck",

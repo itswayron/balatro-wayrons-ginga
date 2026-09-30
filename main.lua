@@ -22,7 +22,7 @@ assert(SMODS.load_file("src/scoring.lua"))()
 assert(SMODS.load_file("src/ui.lua"))()
 assert(SMODS.load_file("src/compat.lua"))()
 
--- 3. Jokers & Decks
+-- 3. Jokers, Decks & Vouchers
 assert(SMODS.load_file("jokers/card_in_sleeve.lua"))()
 assert(SMODS.load_file("jokers/another_one.lua"))()
 assert(SMODS.load_file("jokers/occultist.lua"))()
@@ -30,6 +30,8 @@ assert(SMODS.load_file("jokers/vibe_coder.lua"))()
 assert(SMODS.load_file("jokers/leftmost_zero.lua"))()
 assert(SMODS.load_file("jokers/stack_overflow.lua"))()
 assert(SMODS.load_file("decks/battery.lua"))()
+assert(SMODS.load_file("vouchers/scalper.lua"))()
+assert(SMODS.load_file("vouchers/dollar_dealer.lua"))()
 
 -- 4. Mod Integrations
 if CardSleeves and CardSleeves.Sleeve then

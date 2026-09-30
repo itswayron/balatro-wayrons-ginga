@@ -57,3 +57,17 @@ SMODS.Atlas {
     px = 71,
     py = 95
 }
+
+SMODS.Atlas {
+    key = "scalper",
+    path = "scalper.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "dollar_dealer",
+    path = "dollar_dealer.png",
+    px = 71,
+    py = 95
+}

@@ -53,6 +53,22 @@ return {
                 }
             }
         },
+        Voucher = {
+            v_wg_scalper = {
+                name = "Cambista",
+                text = {
+                    "Todos os {C:attention}Consumíveis{} são vendidos",
+                    "por {C:money}+#1#{} acima do preço pago"
+                }
+            },
+            v_wg_dollar_dealer = {
+                name = "Doleiro",
+                text = {
+                    "Todos os {C:attention}Consumíveis{} são vendidos por",
+                    "{C:money}+#1#{} adicionais {C:inactive}(+#2# no total){}"
+                }
+            }
+        },
         Back = {
             b_wg_battery = {
                 name = "Deck Bateria",

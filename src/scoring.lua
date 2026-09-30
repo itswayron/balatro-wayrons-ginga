@@ -237,3 +237,23 @@ function Card:calculate_joker(context)
     end
     return card_calc_joker_ref(self, context)
 end
+
+-- =========================================================================
+-- VOUCHER HOOKS (SCALPER / DOLLAR DEALER)
+-- =========================================================================
+
+local orig_card_set_cost = Card.set_cost
+function Card:set_cost()
+    orig_card_set_cost(self)
+    local bonus = (WG and WG.get_voucher_consumable_bonus and WG.get_voucher_consumable_bonus()) or 0
+    local is_consumable = (WG and WG.is_consumable and WG.is_consumable(self)) or (self.ability and (self.ability.consumeable or self.ability.consumable or self.ability.set == 'Tarot' or self.ability.set == 'Planet' or self.ability.set == 'Spectral'))
+    if bonus > 0 and is_consumable then
+        local card_cost = self.cost or 3
+        if card_cost <= 0 and self.config and self.config.center and self.config.center.cost then
+            card_cost = self.config.center.cost
+        end
+        local vanilla_base_sell = math.max(1, math.floor((self.cost or 3) / 2))
+        local extras = math.max(0, (self.sell_cost or 0) - vanilla_base_sell)
+        self.sell_cost = math.max(self.sell_cost, card_cost + extras + bonus)
+    end
+end
